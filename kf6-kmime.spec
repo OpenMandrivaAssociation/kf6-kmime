@@ -6,7 +6,7 @@
 
 Name:		kf6-kmime
 Version:	6.29.0
-Release:	1
+Release:	2
 Source0:	https://download.kde.org/%{stable}/frameworks/%{major}/kmime-%{version}.tar.xz
 Summary:	Library for handling MIME data
 URL:		https://invent.kde.org/frameworks/kmime
