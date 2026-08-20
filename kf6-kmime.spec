@@ -44,6 +44,9 @@ KMime is a library for handling mail messages and other MIME data.
 Summary:	Development files for %{name}
 Group:		Development/C
 Requires:	%{libname} = %{EVRD}
+# Compatibility with Gear packages that still look for the old PIM cmake name
+Provides:	cmake(KPim6Mime) = %{version}
+Provides:	cmake(kpim6mime) = %{version}
 
 %description -n %{devname}
 Development files (headers, CMake config) for %{name}.
