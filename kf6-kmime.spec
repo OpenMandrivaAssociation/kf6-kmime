@@ -6,7 +6,7 @@
 
 Name:		kf6-kmime
 Version:	6.29.0
-Release:	2
+Release:	3
 Source0:	https://download.kde.org/%{stable}/frameworks/%{major}/kmime-%{version}.tar.xz
 Summary:	Library for handling MIME data
 URL:		https://invent.kde.org/frameworks/kmime
@@ -36,6 +36,7 @@ KMime is a library for handling mail messages and other MIME data.
 Summary:	Library for handling MIME data
 Group:		System/Libraries
 Requires:	%{name} = %{EVRD}
+%rename		%mklibname KPim6Mime
 
 %description -n %{libname}
 KMime is a library for handling mail messages and other MIME data.
@@ -44,6 +45,7 @@ KMime is a library for handling mail messages and other MIME data.
 Summary:	Development files for %{name}
 Group:		Development/C
 Requires:	%{libname} = %{EVRD}
+%rename		%mklibname KPim6Mime -d
 # Compatibility with Gear packages that still look for the old PIM cmake name
 Provides:	cmake(KPim6Mime) = %{version}
 Provides:	cmake(kpim6mime) = %{version}
