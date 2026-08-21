@@ -6,7 +6,7 @@
 
 Name:		kf6-kmime
 Version:	6.29.0
-Release:	4
+Release:	5
 Source0:	https://download.kde.org/%{stable}/frameworks/%{major}/kmime-%{version}.tar.xz
 Summary:	Library for handling MIME data
 URL:		https://invent.kde.org/frameworks/kmime
@@ -24,7 +24,12 @@ BuildRequires:	cmake(Qt6ToolsTools)
 BuildRequires:	cmake(KF6Codecs)
 Requires:	%{libname} = %{EVRD}
 # Moved from Gear into Frameworks 6.27+
-%rename		kmime
+# Not using %%rename because of the different versioning scheme.
+# We have to Obsolete and Provide a version newer than ours -- the
+# last Gear version was 26.04.x, so let's set the version to the first
+# Gear that doesn't contain kmime
+Obsoletes:	kmime < 26.08.0
+Provides:	kmime = 26.08.0
 BuildSystem:	cmake
 BuildOption:	-DBUILD_QCH:BOOL=ON
 BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
