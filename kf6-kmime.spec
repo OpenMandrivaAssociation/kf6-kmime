@@ -6,7 +6,7 @@
 
 Name:		kf6-kmime
 Version:	6.29.0
-Release:	3
+Release:	4
 Source0:	https://download.kde.org/%{stable}/frameworks/%{major}/kmime-%{version}.tar.xz
 Summary:	Library for handling MIME data
 URL:		https://invent.kde.org/frameworks/kmime
@@ -46,9 +46,6 @@ Summary:	Development files for %{name}
 Group:		Development/C
 Requires:	%{libname} = %{EVRD}
 %rename		%mklibname KPim6Mime -d
-# Compatibility with Gear packages that still look for the old PIM cmake name
-Provides:	cmake(KPim6Mime) = %{version}
-Provides:	cmake(kpim6mime) = %{version}
 
 %description -n %{devname}
 Development files (headers, CMake config) for %{name}.
