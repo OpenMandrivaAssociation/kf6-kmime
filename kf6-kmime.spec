@@ -5,7 +5,7 @@
 %define devname %mklibname KF6Mime -d
 
 Name:		kf6-kmime
-Version:	6.30.0
+Version:	6.31.0
 Release:	1
 Source0:	https://download.kde.org/%{stable}/frameworks/%{major}/kmime-%{version}.tar.xz
 Summary:	Library for handling MIME data
